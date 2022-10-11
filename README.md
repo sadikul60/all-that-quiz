@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## LiveSite Link:
 
-In the project directory, you can run:
+* added Navbar and Header and Topics
 
 ### `npm start`
 
