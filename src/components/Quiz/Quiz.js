@@ -8,9 +8,13 @@ const Quiz = ({ questions }) => {
    
     return (
         <div className=' mx-auto w-full text-xl py-10 mb-28 text-center bg-slate-200'>
-            {
-                <h1 className='text-2xl pb-12'>Que:{index} {question}</h1>
-            }
+            <div className='flex px-10 justify-between text-2xl pb-12'>
+                {
+                    <h1>Que:{index} {question}</h1>
+                    
+                }
+            <h1>This</h1>
+            </div>
             <div>
                 {
                     options.map(option => <Option 
