@@ -11,11 +11,11 @@ const Tipic = ({topic}) => {
             <div className="lg:flex lg:justify-around py-10 px-8 items-center">
                 <h2 className="text-lg font-bold mr-7 mb-5">{name}</h2>
                 <h3 className="text-lg font-bold mr-7 mb-5">Quiz: {total}</h3>
-                <div className="">
+                
                 <Link to = {`/quiz/${id}`}>
-                <button className="btn btn-primary w-full mb-5 hover:bg-blue-600">Start Practice <ArrowRightIcon className='w-4 h-4 font-bold'></ArrowRightIcon> </button>
+                <button className="btn btn-primary w-full mb-5 hover:bg-blue-600">Start Now <ArrowRightIcon className='w-4 h-4 font-bold'></ArrowRightIcon> </button>
                 </Link>
-                </div>
+
             </div>
         </div>
     );
