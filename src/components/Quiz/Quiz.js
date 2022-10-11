@@ -1,19 +1,34 @@
 
 import Option from '../Option/Option';
+import { EyeIcon } from '@heroicons/react/24/solid';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = ({ questions }) => {
     const { options, question, correctAnswer, index} = questions;
     console.log(correctAnswer)
+    
+        const clickedButton = () =>{
+            if(correctAnswer){
+                toast(correctAnswer);
+            }
+        }
+           
+  
+
+    
+    
    
     return (
         <div className=' mx-auto w-full text-xl py-10 mb-28 text-center bg-slate-200'>
             <div className='flex px-10 justify-between text-2xl pb-12'>
                 {
-                    <h1>Que:{index} {question}</h1>
+                    <h1 className='w-3/4'>Que:{index} {question}</h1>
                     
                 }
-            <h1>This</h1>
+                <EyeIcon onClick={clickedButton} className='w-8 h-8 text-blue-500'></EyeIcon>
+                <ToastContainer></ToastContainer>
             </div>
             <div>
                 {
