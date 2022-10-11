@@ -6,8 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = ({ questions }) => {
-    const { options, question, correctAnswer, index} = questions;
-    console.log(correctAnswer)
+    const { options, question, correctAnswer} = questions;
+
+ 
     
         const clickedButton = () =>{
             if(correctAnswer){
@@ -24,7 +25,7 @@ const Quiz = ({ questions }) => {
         <div className=' mx-auto w-full text-xl py-10 mb-28 text-center bg-slate-200'>
             <div className='flex px-10 justify-between text-2xl pb-12'>
                 {
-                    <h1 className='w-3/4'>Que:{index} {question}</h1>
+                    <li className='w-3/4 list-item list-decimal'>Que: {question}</li>
                     
                 }
                 <EyeIcon onClick={clickedButton} className='w-8 h-8 text-blue-500'></EyeIcon>
