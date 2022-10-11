@@ -1,16 +1,19 @@
 import React from 'react';
 import './Option.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Option = ({option, correctAnswer}) => {
 
-    const selectOption = () => {
-
     const clickedButton = () =>{
         if(correctAnswer === option){
-            
+            toast("Right Answere!");
+        }
+        else{
+            toast("Wrong Answere");
         }
     }
-   }
+
     // console.log(option)
     return (
         
@@ -19,6 +22,7 @@ const Option = ({option, correctAnswer}) => {
                 <span className=" text-xl ">{option}</span> 
                 <input type="radio" name="radio-6" className="radio checked:bg-blue-500 text-white" checked />
             </label>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
