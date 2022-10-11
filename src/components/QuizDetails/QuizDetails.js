@@ -11,7 +11,11 @@ const QuizDetails = () => {
             <h1 className='text-3xl font-bold my-4'>Quiz of {quizDetails.data.name}</h1>
             <div className='my-18'>
                 {
-                    questionData.map(questions => <Quiz questions={questions} key={questions.id}></Quiz>)
+                    questionData.map((questions, index) => <Quiz 
+                        index={index} 
+                        questions={questions} 
+                        key={questions.id}
+                        ></Quiz>)
                 }
                 
             </div>
