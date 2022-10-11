@@ -2,9 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## LiveSite Link:
+## LiveSite Link: https://voluble-faloodeh-47a706.netlify.app/
 
-* added Navbar and Header and Topics
+* Added Navbar.
+* Several features have been added. You can easily know unknown information from this site.
+* Added a few routes to Navbar.
+    * Home
+    * Topics
+    * Statistics
+    * blog
 
 ### `npm start`
 
