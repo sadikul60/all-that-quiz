@@ -17,9 +17,6 @@ const Quiz = ({ questions, index }) => {
         }
            
   
-
-    
-    
    
     return (
         <div className=' mx-auto w-full text-xl py-10 mb-28 text-left md:text-center bg-slate-200 shadow-lg'>

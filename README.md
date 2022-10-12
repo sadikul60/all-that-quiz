@@ -1,6 +1,6 @@
 # all-that-quiz-assignment
 
-## LiveSite Link: https://voluble-faloodeh-47a706.netlify.app/
+## LiveSite Link: https://all-that-quiz-assignment-47a706.netlify.app/
 
 * Added Navbar.
 * Several features have been added. You can easily know unknown information from this site.
