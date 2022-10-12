@@ -5,18 +5,28 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 const Quiz = ({ questions, index }) => {
     
     const { options, question, correctAnswer } = questions;
 
     
-        const clickedButton = () =>{
+        const HandleShowRightAns = () =>{
             if(correctAnswer){
                 toast(correctAnswer);
             }
         }
            
   
+        const clickedButton = (option) =>{
+            if( correctAnswer === option ){
+                toast("Right Answere!");
+                return;
+            }
+            else{
+                toast("Wrong Answere");
+            }
+        }
    
     return (
         <div className=' mx-auto w-full text-xl py-10 mb-28 text-left md:text-center bg-slate-200 shadow-lg'>
@@ -25,18 +35,20 @@ const Quiz = ({ questions, index }) => {
                     <h3 className="w-3/4"><span className='font-bold'>Que-{index + 1}. </span> {question}</h3>
                     
                 }
-                <EyeIcon onClick={clickedButton} className='w-8 h-8 text-blue-500'></EyeIcon>
+                <EyeIcon onClick={HandleShowRightAns} className='w-8 h-8 text-blue-500'></EyeIcon>
                 <ToastContainer></ToastContainer>
             </div>
             <div>
                 {
-                    options.map((option, id) => <Option 
+                    options.map((option, index) => <Option 
                         key={option.id} 
                         option = {option}
                         correctAnswer = {correctAnswer}
-                        id = {id}
+                        index = {index}
+                        clickedButton = {clickedButton}
                         ></Option>)
                 }
+                
             </div>
         </div>
     );
