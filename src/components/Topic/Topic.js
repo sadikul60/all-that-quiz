@@ -6,7 +6,7 @@ const Tipic = ({topic}) => {
     const { id, name, logo, total } = topic;
     // console.log(questions)
     return (
-        <div className="card card-compact w-full bg-slate-200 shadow-xl">
+        <div className="card card-compact w-10/12 mx-auto lg:w-full lg:mx-auto bg-slate-200 shadow-xl">
             <figure><img className='h-72' src={logo} alt="" /></figure>
             <div className="lg:flex lg:justify-around py-10 px-8 items-center">
                 <h2 className="text-lg font-bold mr-7 mb-5">{name}</h2>

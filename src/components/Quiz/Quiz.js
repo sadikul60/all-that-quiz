@@ -6,10 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = ({ questions, index }) => {
-    console.log(questions)
+    
     const { options, question, correctAnswer } = questions;
 
- 
     
         const clickedButton = () =>{
             if(correctAnswer){
@@ -23,8 +22,8 @@ const Quiz = ({ questions, index }) => {
     
    
     return (
-        <div className=' mx-auto w-full text-xl py-10 mb-28 text-center bg-slate-200 shadow-lg'>
-            <div className='flex px-10 justify-between text-2xl pb-12'>
+        <div className=' mx-auto w-full text-xl py-10 mb-28 text-left md:text-center bg-slate-200 shadow-lg'>
+            <div className='flex px-3 sm:px-3 md:px-10 justify-between md:text-2xl pb-12'>
                 {
                     <h3 className="w-3/4"><span className='font-bold'>Que-{index + 1}. </span> {question}</h3>
                     
@@ -34,11 +33,11 @@ const Quiz = ({ questions, index }) => {
             </div>
             <div>
                 {
-                    options.map((option, index) => <Option 
+                    options.map((option, id) => <Option 
                         key={option.id} 
                         option = {option}
                         correctAnswer = {correctAnswer}
-                        index = {index}
+                        id = {id}
                         ></Option>)
                 }
             </div>
